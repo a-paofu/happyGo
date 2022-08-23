@@ -1,0 +1,17 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/juejin_blog?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+# 日志等级从低到高的顺序是: DEBUG < INFO < WARNING < ERROR < Fatal
+# 低级别包含所有高级别，比如是INFO级别，那么除了debug级别的都能输出
+logging:
+  level:
+    com.example: debug
+    org.springframework.web: error
+  file:
+    name: f:/logs/juejin.log
