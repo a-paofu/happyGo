@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文章详情页</title>
+    <link rel="stylesheet" href="./css/detail.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./lib/umd/index.js"></script>
+  </head>
+  <body>
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- logo图片 导航图标-->
+        <div class="navbar-header">
+          <li role="presentation" style="list-style: none">
+            <a class="navbar-brand" href="#">
+              <img alt="稀土掘金" src="./image/logo.jpg" />
+            </a>
+          </li>
+        </div>
+
+        <!-- 响应式导航条 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- 首页等部分 -->
+          <ul class="nav navbar-nav">
+            <!-- class="active" <span class="sr-only">(current)</span>-->
+            <li role="presentation">
+              <a href="#">首页 </a>
+            </li>
+            <li role="presentation"><a href="#">沸点</a></li>
+            <li role="presentation"><a href="#">课程</a></li>
+            <li role="presentation"><a href="#">直播</a></li>
+            <li role="presentation"><a href="#">活动</a></li>
+            <li role="presentation"><a href="#">商城</a></li>
+            <li role="presentation"><a href="#">APP</a></li>
+            <li role="presentation"><a href="#">插件</a></li>
+          </ul>
+          <!-- 搜索框 -->
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="搜索稀土掘金"
+              />
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <!-- 下拉菜单 -->
+          <ul class="nav navbar-nav navbar-left">
+            <!-- btn btn-primary -->
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >创作者中心 <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">写文章</a></li>
+                <li><a href="#">写沸点</a></li>
+                <li><a href="#">写代码</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- 登录 -->
+          <ul class="nav navbar-nav">
+            <button type="button" class="btn btn-default navbar-btn">
+              会员
+            </button>
+            <button type="button" class="btn btn-primary navbar-btn">
+              登录
+            </button>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <!-- 主体部分 -->
+    <div class="container">
+      <!-- <a class="btn btn-primary" href="#" role="button">Link</a> -->
+      <div class="row">
+        <!-- 左侧样式 -->
+        <div class="col-sm-2">
+          <ul class="left-slide" style="list-style: none">
+            <li>
+              <a href="#"><img src="./image/l_1.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./image/l_2.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./image/l_3.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./image/l_4.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./image/l_5.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./image/l_6.jpg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 中间内容 -->
+        <div class="col-sm-7">
+          <!-- 大标题部分 -->
+          <span class="article-title"></span>
+          <!-- <hr /> -->
+          <!-- 作者部分 -->
+          <div class="container-fluid">
+            <div class="author">
+              <!-- 图片 -->
+              <a href="#"
+                ><img
+                  src="./image/author.jpg"
+                  alt="作者图片"
+                  title="作者"
+                  class="link"
+              /></a>
+              <!-- 简介 -->
+              <div class="author-box">
+                <div class="author-name">
+                  <!-- <a href="#" class="username"> -->
+                  <span class="name" style="max-width: 128px">秦一</span>
+                  <span class="rank" blank="true">
+                    <img src="./image/level.jpg" alt="创作等级" />
+                  </span>
+                  <!-- </a> -->
+                </div>
+                <div class="meta-box">
+                  <time class="time"> 2020年05月09日 08:07</time>
+                  <span class="views-count">&nbsp;&nbsp;阅读989</span>
+                </div>
+              </div>
+              <!-- 关注按钮 -->
+              <button class="follow-button">
+                <span class="icon icon-follow"></span>
+                <span data-text="取消关注" class="text">关注</span>
+              </button>
+            </div>
+          </div>
+          <!-- 内容部分 -->
+          <div class="container-fluid" id="root" data-toc="#catalogs"></div>
+        </div>
+        <!-- 右侧样式 -->
+        <div class="col-sm-3">
+          <!-- 作者部分 -->
+          <div class="container-fluid">
+            <a href="#"
+              ><img
+                src="./image/author.jpg"
+                alt="作者图片"
+                title="作者"
+                class="link"
+            /></a>
+            <span style="max-width: 128px">秦一</span>
+            <!-- class="rank" class="name" -->
+            <span blank="true">
+              <img src="./image/level.jpg" alt="创作等级" />
+            </span>
+            <hr />
+            <ul>
+              <li>获得点赞&nbsp;168</li>
+              <li>文章被阅读&nbsp;42,396</li>
+            </ul>
+            <!-- <span>获得点赞&nbsp;168</span>
+            <br />
+            <span>文章被阅读&nbsp;42,396</span> -->
+            <hr />
+          </div>
+          <!-- 广告部分 下载稀土掘金app部分 -->
+          <div class="container-fluid">
+            <ul class="advert" style="list-style: none">
+              <li>
+                <!-- style="background-image: url("./image/g_1.jpg"); -->
+                <a href="#">
+                  <img src="./image/g_1.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#"><img src="./image/g_2.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./image/g_3.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./image/g_4.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./image/下载.jpg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+          <br />
+          <!-- 相关文章部分 -->
+          <div class="container-fluid article">
+            <!-- <h4>相关文章</h4> -->
+            <span>相关文章</span>
+            <hr />
+            <a href="#">
+              <h7>123和456</h7>
+              <div>
+                <span>14点赞&nbsp;0评论</span>
+              </div>
+            </a>
+            <a href="#">
+              <h7>123和456789</h7>
+              <div>
+                <span>14点赞&nbsp;0评论</span>
+              </div>
+            </a>
+            <a href="#">
+              <h7>123和456454545</h7>
+              <div>
+                <span>14点赞&nbsp;0评论</span>
+              </div>
+            </a>
+          </div>
+          <hr />
+          <!-- 目录部分 -->
+          <div class="container-fluid" id="catalogs">
+            <!-- <h4>目录</h4> -->
+            <span>目录</span>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // 左边样式
+      var left = document.querySelector('.left-slide');
+      var right = document.querySelector('#catalogs');
+      document.addEventListener('scroll', function () {
+        if (window.pageYOffset >= 100) {
+          left.style.position = 'fixed';
+
+          left.style.top = 100 + 'px';
+        } else {
+          left.style.position = 'absolute';
+          left.style.top = 0 + 'px';
+        }
+        // 右边样式
+        if (window.pageYOffset >= 800) {
+          right.style.position = 'fixed';
+          right.style.top = 100 + 'px';
+        } else {
+          right.style.position = 'absolute';
+          right.style.top = 830 + 'px';
+        }
+      });
+    </script>
+  </body>
+  <script src="./js/detail.js"></script>
+
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+  ></script>
+</html>

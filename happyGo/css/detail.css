@@ -1,0 +1,154 @@
+/* 大标题 */
+.article-title{
+  margin: 0 0 1.667rem;
+    font-size: 2.667rem;
+    font-weight: 600;
+    line-height: 1.31;
+    color: #252933;
+}
+
+/* 作者 */
+.author{
+  display: flex;
+    align-items: center;
+}
+
+.author .link{
+  font-size: 0;
+}
+.author .author-box{
+    min-width: 0;
+    flex-grow: 1;
+    flex: 1;
+    min-height: 43px;
+}
+.author.author-name{
+  height: 2rem;
+}
+
+/* .author.author-name.username{
+  width: 100%;
+    font-size: 1.333rem;
+    font-weight: 500;
+    color: #515767;
+    line-height: 2rem;
+} */
+.name{
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 等级 */
+.rank{
+  display: inline-flex;
+    align-items: center;
+    margin-left: 0.33rem;
+    vertical-align: middle;
+}
+
+.meta-box{
+  font-size: 1.167rem;
+  color: #8a919f;
+  margin-top: 2px;
+  line-height: 22px;
+}
+.meta-box .time{
+  letter-spacing: 1px;
+}
+
+
+.follow-button{
+  margin: 0 0 0 auto;
+    padding: 0 1rem;
+    height: 34px;
+    font-size: 14px;
+    color: #1e80ff;
+    background: rgba(30,128,255,.05);
+    border: 1px solid rgba(30,128,255,.3);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.follow-button .icon{
+  margin-right: 4px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+
+.follow-button .icon .icon-follow{
+  background: url(//lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/85a1a2e5c5c07c922317fc603d542aca.svg) 0 0 no-repeat;
+}
+
+.col-sm-2{
+  position:absolute;
+  top: 100px;
+}
+ .left-slide {
+  /* 重置浏览器样式 */
+  padding: 0;
+  margin: 0;
+}
+.left-slide li{
+  /* 修改li标签之间的间隔 */
+  margin-bottom: 20px;
+}
+
+
+/* 右边栏 */
+.col-sm-3{
+
+}
+
+.advert {
+  padding: 0;
+  margin: 0;
+}
+
+.advert li{
+  margin-bottom: 10px;
+}
+
+/* .article span{
+
+} */
+
+.article a{
+  color: #252933;
+}
+.article a:hover{
+  color: blue;
+  text-decoration: none;
+}
+
+.article a span{
+  color: #8a919f;
+}
+
+/* 目录样式 */
+a odd {
+	margin-left: 1em;
+}
+a even{
+	margin-left: 2em;
+}
+
+.active {
+  /* color: pink; */
+  font-size: 20px;
+  font-weight: bold;
+}
+#catalogs li{
+  list-style:none;
+}
+
+#catalogs a {
+  text-decoration: none;
+  color: #252933;
+  /* color:white; */
+}
+
